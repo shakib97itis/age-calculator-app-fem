@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+:root {
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+}
+
+html {
+  box-sizing: inherit;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.6rem;
+  height: 100vh;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--off-white);
+  line-height: 1.7;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Calculator styles
+.age-calc {
+  background-color: var(--white);
+  min-width: 40rem;
+  min-height: 50rem;
+  padding: 4rem;
+  border-radius: 1rem;
+  border-bottom-right-radius: 15rem;
+
+  &__form {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 12rem);
+    gap: 4rem;
+    padding-bottom: 4rem;
+    border-bottom: 2px solid var(--light-grey);
+  }
+
+  &__input-box {
+    label {
+      display: block;
+      font-size: 1.4rem;
+      color: var(--smokey-grey);
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+      font-family: inherit;
+      text-transform: uppercase;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      font-family: inherit;
+      color: var(--off-black);
+      border-radius: 0.8rem;
+      border: 2px solid var(--off-white);
+      padding: 1.2rem 1rem;
+      font-size: 3.2rem;
+    }
+
+    p {
+      font-weight: 400;
+      font-style: italic;
+      font-size: 1.2rem;
+    }
+
+    &.input-error {
+      color: var(--light-red);
+      label {
+        color: var(--light-red);
+      }
+
+      input {
+        border: 2px solid var(--light-red);
+      }
+    }
+  }
+
+  &__content {
+    padding-top: 2rem;
+  }
+
+  &__text {
+    font-size: 5.8rem;
+    
+    span {
+      color: var(--purple);
+    }
+  }
+}
+
+.input-error {
+  color: var(--light-red);
+  label {
+    // color: var();
+  }
+}
+
+.btn {
+  position: absolute;
+  width: 6rem;
+  height: 6rem;
+  bottom: -3rem;
+  right: 0rem;
+  background-color: var(--purple);
+  border: none;
+  border-radius: 50%;
+
+  &__icon {
+    width: 60%;
+    height: 60%;
+  }
+}
+
+.btn-submit {
+}
